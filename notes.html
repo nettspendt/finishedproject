@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Geometry- Circles and Polygons</title>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="quiz.html">Quiz</a>
+<a href="circle.html">Circle Diagram</a>
+<a href="realworld.html">Real World Examples</a>
+
+</nav>
+
+<div class="container">
+
+<h1>Geometry Study Guide</h1>
+
+<p style="font-size:18px; opacity:0.85; line-height:1.6;">
+This guide follows class notes and explains each concept clearly so you understand both the definitions and the reasoning behind them.
+</p>
+
+
+
+<!-- ================= CIRCUMFERENCE ================= -->
+<div class="box">
+<h2 onclick="toggle('circumference')" style="cursor:pointer;">Circumference</h2>
+
+<div id="circumference" style="display:none; font-size:17px; line-height:1.7;">
+
+<p><b>Definition:</b> The circumference of a circle is the distance around the circle.</p>
+
+<hr>
+
+<p><b>Should I round?</b></p>
+
+<p>
+When you are asked to find a circumference, leave the answer in terms of π (exact form) unless you are asked to approximate.
+</p>
+
+<p><b>Exact form example:</b> 10π</p>
+
+<hr>
+
+<p><b>How do I approximate?</b></p>
+
+<p>
+To approximate, use a calculator and press the π button.
+Then multiply normally and round if needed.
+</p>
+
+<p><b>Example:</b></p>
+<p>r = 5, so C = 2πr = 10π ≈ 31.4</p>
+
+</div>
+</div>
+
+
+
+
+<div class="box">
+<h2 onclick="toggle('polygons')" style="cursor:pointer;">Polygons</h2>
+
+<div id="polygons" style="display:none; font-size:17px; line-height:1.7;">
+
+<p><b>Polygons:</p>The center and radius of a regular polygon are the center and radius of the circumscribed circle.</b>
+
+
+<hr>
+
+<b>The distance from the center to any side of a regular polygon is called the apothem.</b>
+
+<p>A polygon is inscribed in a circle if all its vertices lie on the circle.</p>
+<img src="unnamed.png">
+<p>The center of the inscribed circle in a polygon is called the incenter.</p>
+
+<p><b>Important rule:</b></p>
+
+<p>If a quadrilateral is inscribed in a circle, its opposite angles are supplementary.</p>
+
+
+<hr>
+
+<p><b>Special case:</b></p>
+
+<p>If a parallelogram is inscribed in a circle:</p>
+
+<ul>
+<li>Opposite angles are congruent </li>
+<li>Opposite angles are supplementary </li>
+</ul>
+
+<p>So angles are both congruent and supplementary, each must be 90°.</p>
+
+<p><b>So,</b> The parallelogram is a rectangle.</p>
+</div>
+</div>
+
+<div class="box">
+<h2 onclick="toggle('areaa')" style="cursor:pointer;">Area of Polygons</h2>
+
+<div id="areaa" style="display:none; font-size:17px; line-height:1.7;">
+
+<h1><b>A=1/2aP</b></h1>
+<p><b>The Area</b>of a regular polygon is the length of the apothem times the perimeter of the polygon times one half.</p>
+<h1><b>Calculating the Area of Regular Polygons</b></h1>
+<p><b>Step 1-</b>Find the measure of each interior angle by using N(number of sides)A(measure of interior angle)=(n-2) times 180</p>
+<p><b>Step 2-</b>Divide the interior angles by 2, and set up equation like tan x degrees= opp/adj</p>
+<p><b>Step 3-</b>After solving, multiply the sides of the triangle, then multiply by the amount of sides to find the area.</p>
+<h2><b>Why does it work?</b></h2>
+<p>This works because regular polygons can be sliced into identical triangles and then get added up to form a single shapoe. Find the area of one triangle, and then you can add them all up to find total area.</p>
+<img src="area.png">
+</div>
+</div>
+
+<!-- ================= CIRCLE BASICS ================= -->
+<div class="box">
+<h2 onclick="toggle('circledefs')" style="cursor:pointer;">Circle Basics</h2>
+
+<div id="circledefs" style="display:none; font-size:17px; line-height:1.7;">
+
+<p>A circle is the set of all points equidistant from a center point.</p>
+
+<p>Click Here: <a href="circle.html"><h1>Circle Diagram</h1></a></p>
+
+</div>
+</div>
+
+
+
+<!-- ================= SECTORS ================= -->
+<div class="box">
+<h2 onclick="toggle('sectors')" style="cursor:pointer;">Sectors</h2>
+
+<div id="sectors" style="display:none; font-size:17px; line-height:1.7;">
+
+<p>A sector of a circle is a region bound by two radii and their intercepted arc.</p>
+
+<p>Sectors are named using:
+- one arc endpoint  
+- center of circle  
+- other arc endpoint  
+</p>
+
+<p><b>Area:</b> A sector is a fraction of a circle’s area.</p>
+
+<p><b>Formula:</b> (θ / 360) × πr²</p>
+<b><h1>Steps to Finding the Area of a Sector of a Circle:</h1></b>
+<p><b>Step 1-</b>Find the radius of a circle with the formula πr²</p>
+<p><b>Step 2-</b>Find the angle measure of the arc of the sector</p>
+<p><b>Step 3-</b>Divide the angle measure by 360- That is the cumulative measure of the whole circle</p>
+<p><b>Step 4-</b>Multiply the quotient by the area of the whole circle and you will get your answer</p>
+</div>
+</div>
+
+
+
+<!-- ================= ARCS ================= -->
+<div class="box">
+<h2 onclick="toggle('arcs')" style="cursor:pointer;">Arcs</h2>
+
+<div id="arcs" style="display:none; font-size:17px; line-height:1.7;">
+<img src="unnamed (1).png" alt="Photo">
+<p>Adjacent arcs are arcs of the same circle that share exactly one endpoint.</p>
+
+<h1><b>Arc Addition Postulate:</b></h1>
+
+<p>The measure of an arc formed by two adjacent arcs is the sum of the two arc measures.</p>
+
+<p><b>Idea:</b> You can “combine” arcs by adding their measures.</p>
+<b><h1>Arcs:</h1></b> <p>Arcs are a curved figure line that connects two points on a circle, and all points connect them by a single path.</p></b>
+<b><h1>Semicircles:</b></h1> Endpoints are the endpoints of the diameter, and the measure is 180 degrees. Named using 3 letters.</p></b>
+<b><h1>Major Arcs:</b></h1> Measure is greater than a semicircle. You can find the measure of degrees of an arc by subtracting the measure of the minor arc by 360. Also named with 3 letters.</p></b>
+<b><h1>Minor Arcs:</b></h1> Measure is less than a semicircle. Find degrees of arc by subtracting the measure of the major arc in the circle by 360. Named with 2 letters.</p></b>
+<h1><b>Finding Arc Length:</b></h1>
+<p><b>Step 1-</b>Find the circumference of the circle by doing 2 times the length of the radius, and then multiplying by pi</p>
+<p><b>Step 2-</b>Find the angle measure of the arc that you are finding the distance of and divide by 360</p>
+<p><b>Step 3-</b>Multiply both of these numbers to find final answer</p>
+</div>
+</div>
+
+
+<!-- ================= INSCRIBED ANGLES ================= -->
+<div class="box">
+<h2 onclick="toggle('inscribed')" style="cursor:pointer;">Inscribed Angles</h2>
+
+<div id="inscribed" style="display:none; font-size:17px; line-height:1.7;">
+
+<p>An inscribed angle has its vertex on the circle and its sides are chords.</p>
+<b><h1>Theorem:</b></h1>
+<p>The measure of an inscribed angle is half the measure of its intercepted arc.</p>
+<img src="inscripted.png" alt="Photo">
+<b><h1>Formula idea:</b></h1>
+<p>Angle = ½ arc</p>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+function toggle(id) {
+    const el = document.getElementById(id);
+    el.style.display = (el.style.display === "none") ? "block" : "none";
+}
+</script>
+
+</body>
+</html>

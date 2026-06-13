@@ -1,0 +1,119 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Circles, Polygons &amp; the Real World</title>
+<nav>
+<a href="index.html">Home</a>
+<a href="notes.html">Notes</a>
+<a href="circle.html">Circle</a>
+<a href="realworld.html">Real World Examples</a>
+</nav>
+<style>
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 0 20px 40px;
+    color: #222;
+    background: #fff;
+    line-height: 1.6;
+  }
+  h1 {
+    color: #2E6CA4;
+    font-size: 30px;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid #222;
+    padding-bottom: 10px;
+  }
+  h1 span {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #2E6CA4;
+  }
+  h2 {
+    font-family: 'Comic Sans MS', 'Segoe Print', cursive, sans-serif;
+    font-size: 26px;
+    margin-top: 0;
+  }
+  p { font-family: Arial, sans-serif; font-size: 16px; }
+
+  .intro {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 18px 0 28px;
+  }
+
+  .examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .card {
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+  .card.circle h2 { color: #2E6CA4; }
+  .card.circle { border-color: #2E6CA4; }
+  .card.polygon h2 { color: #C2710C; }
+  .card.polygon { border-color: #C2710C; }
+
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #2E6CA4;
+    border-top: 2px solid #2E6CA4;
+    padding-top: 8px;
+  }
+
+  @media (max-width: 600px) {
+    .examples { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+
+<div class="intro">
+  Calculating area solves real-life problems like optimizing materials, manufacturing goods,
+  and planning land use. Geometry and Math in general are used to run society.
+</div>
+
+<div class="examples">
+
+  <div class="card circle">
+    <h2>circles</h2>
+    <p>
+      Cell towers broadcast signal in every direction equally, so their coverage area is a circle.
+      Engineers calculate the area of that circle to figure out how many towers are needed to
+      cover a city without gaps or wasted overlap.
+    </p><img src="download.jpg" alt="Photo">
+
+  </div>
+
+  <div class="card polygon">
+    <h2>polygons</h2>
+    <p>
+      Land districts, fields, and building lots are mapped as polygons. Calculating their area
+      down to the square foot lets planners divide land fairly, set property taxes, and decide
+      how many homes or crops can fit on a parcel.
+    </p>
+    <img src="acre.png" alt="Photo">
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

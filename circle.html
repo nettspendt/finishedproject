@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circles</title>
+<nav>
+<a href="index.html">Home</a>
+<a href="quiz.html">Quiz</a>
+<a href="circle.html">Circle Diagram</a>
+<a href="realworld.html">Real World Examples</a>
+
+</nav>
+<style>
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 0 20px 40px;
+    color: #222;
+    background: #fff;
+  }
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    border-bottom: 3px solid #222;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+  }
+  h1 {
+    color: #2E6CA4;
+    font-size: 30px;
+    margin: 0 0 18px 0;
+    letter-spacing: 0.5px;
+  }
+  h1 span {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #2E6CA4;
+  }
+  svg { width: 100%; height: auto; display: block; }
+
+  .label {
+    font-family: 'Comic Sans MS', 'Segoe Print', cursive, sans-serif;
+    font-size: 34px;
+  }
+
+  .node { cursor: pointer; }
+  .node:hover { opacity: 0.65; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+  }
+  td {
+    border: 1px solid #333;
+    padding: 10px 14px;
+    vertical-align: top;
+    width: 50%;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  td:hover { background: #f5f5f5; }
+  td.full { width: 100%; }
+  td b { font-weight: bold; }
+
+  #info {
+    margin-top: 20px;
+    padding: 14px 18px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-height: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  #info h2 { margin: 0 0 6px 0; }
+
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #2E6CA4;
+    border-top: 2px solid #2E6CA4;
+    padding-top: 8px;
+  }
+</style>
+</head>
+<body>
+
+
+
+<h1>Circles</h1>
+
+<svg viewBox="0 0 1000 950" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrowhead" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M1 1 L9 5 L1 9 Z"/>
+  </marker>
+</defs>
+
+<!-- Sector wedge (orange) -->
+<g class="node" onclick="showInfo('sector')">
+  <path d="M500,480 L820,480 A320 320 0 0 0 762,296 Z" fill="#F6CDA3" stroke="none"/>
+</g>
+
+<!-- Segment cap (yellow) -->
+<g class="node" onclick="showInfo('segment')">
+  <path d="M199,371 A320 320 0 0 1 609,179 Z" fill="#FFF200" stroke="none"/>
+</g>
+
+<!-- Main circle outline -->
+<circle cx="500" cy="480" r="320" fill="none" stroke="#000" stroke-width="6"/>
+
+<!-- Diameter -->
+<g class="node" onclick="showInfo('diameter')">
+  <line x1="180" y1="480" x2="820" y2="480" stroke="#7A2C8E" stroke-width="4"/>
+</g>
+
+<!-- Radius -->
+<g class="node" onclick="showInfo('radius')">
+  <line x1="500" y1="480" x2="762" y2="296" stroke="#1FA34D" stroke-width="4"/>
+</g>
+
+<!-- Chord -->
+<g class="node" onclick="showInfo('chord')">
+  <line x1="199" y1="371" x2="609" y2="179" stroke="#000" stroke-width="4"/>
+</g>
+
+<!-- Tangent (touches circle at one point) -->
+<g class="node" onclick="showInfo('tangent')">
+  <line x1="83" y1="398" x2="363" y2="882" stroke="#6E6E2E" stroke-width="3"/>
+</g>
+
+<!-- Secant (crosses circle at two points) -->
+<g class="node" onclick="showInfo('secant')">
+  <line x1="503" y1="887" x2="907" y2="483" stroke="#1E78C2" stroke-width="3"/>
+</g>
+
+<!-- Arc (dashed red, with arrowheads) -->
+<g class="node" onclick="showInfo('arc')">
+  <path d="M238,664 A320 320 0 0 1 472,799" fill="none" stroke="#E63329" stroke-width="3"
+        stroke-dasharray="10 8" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)"/>
+</g>
+
+<!-- Circumference curved arrow -->
+<g class="node" onclick="showInfo('circumference')">
+  <path d="M660,180 A330 330 0 0 1 845,365" fill="none" stroke="#2E6CA4" stroke-width="3"
+        marker-end="url(#arrowhead)"/>
+</g>
+
+<!-- Labels -->
+<g class="node" onclick="showInfo('segment')">
+  <text class="label" x="330" y="270" fill="#A08B00" transform="rotate(-25 330 270)">segment</text>
+</g>
+
+<g class="node" onclick="showInfo('chord')">
+  <text class="label" x="390" y="345" fill="#000" transform="rotate(-25 390 345)">chord</text>
+</g>
+
+<g class="node" onclick="showInfo('radius')">
+  <text class="label" x="660" y="395" fill="#1FA34D" transform="rotate(-35 660 395)">radius</text>
+</g>
+
+<g class="node" onclick="showInfo('sector')">
+  <text class="label" x="640" y="470" fill="#C2710C">sector</text>
+</g>
+
+<g class="node" onclick="showInfo('diameter')">
+  <text class="label" x="500" y="560" fill="#7A2C8E" text-anchor="middle">diameter</text>
+</g>
+
+<g class="node" onclick="showInfo('circumference')">
+  <text class="label" x="700" y="260" fill="#2E6CA4" font-size="40">circumference</text>
+</g>
+
+<g class="node" onclick="showInfo('tangent')">
+  <text class="label" x="120" y="640" fill="#6E6E2E" transform="rotate(60 120 640)">tangent</text>
+</g>
+
+<g class="node" onclick="showInfo('secant')">
+  <text class="label" x="680" y="700" fill="#1E78C2" transform="rotate(-45 680 700)">secant</text>
+</g>
+
+<g class="node" onclick="showInfo('arc')">
+  <text class="label" x="290" y="850" fill="#E63329">arc</text>
+</g>
+
+</svg>
+
+<div id="info">
+  <p>Click on any part of the diagram or table above to learn more about it.</p>
+</div>
+
+
+
+<script>
+const definitions = {
+  centre: {
+    title: "Centre",
+    text: "The centre is the point in the exact middle of the circle. Every point on the circle's edge is the same distance from the centre."
+  },
+  circle: {
+    title:"Circle",
+    text: "The set of all points equidistant from a given point called the central vertex."
+  },
+  radius: {
+    title: "Radius",
+    text: "A segment with endpoints at the center of the circle"
+  },
+  diameter: {
+    title: "Diameter",
+    text: "A chord that goes through the center of the circle."
+  },
+  circumference: {
+    title: "Circumference",
+    text: "The circumference is the distance around the center of the circle."
+  },
+  chord: {
+    title: "Chord",
+    text: "A segment whos endpoints are inside of the circle"
+  },
+  segment: {
+    title: "Segment",
+    text: "A segment is an area of the circle enclosed by a chord. The smaller piece is the minor segment, and the larger piece is the major segment."
+  },
+  sector: {
+    title: "Sector",
+    text: "A sector is an area of the circle enclosed by two radii &mdash; like a slice of pie. It can be a minor sector (smaller) or major sector (larger)."
+  },
+  arc: {
+    title: "Arc",
+    text: "An arc is a section of the outside of the circle &mdash; a curved part of the circumference between two points."
+  },
+  tangent: {
+    title: "Tangent",
+    text: "A tangent is a line from outside the circle which just touches the edge of the circle in one place only."
+  },
+  secant: {
+    title: "Secant",
+    text: "A line that intersects the circle in two points"
+  }
+};
+
+function showInfo(key) {
+  const def = definitions[key];
+  const info = document.getElementById('info');
+  info.innerHTML = '<h2>' + def.title + '</h2><p>' + def.text + '</p>';
+}
+</script>
+
+</body>
+</html>
